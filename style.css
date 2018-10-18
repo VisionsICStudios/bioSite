@@ -12,3 +12,7 @@ img {
         width: 400px;
         height: 275px;
 }
+
+.logo#logoTitle {
+        display: none;
+}
