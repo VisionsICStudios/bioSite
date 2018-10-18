@@ -13,6 +13,6 @@ img {
         height: 275px;
 }
 
-.logo#logoTitle {
+.logo > h1 {
         display: none;
 }
