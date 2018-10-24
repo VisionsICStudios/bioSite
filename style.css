@@ -11,9 +11,17 @@ body {
         margin: 0 auto;
 }
 
-img {
-        width: 400px;
-        height: 275px;
+header, .circle {
+        position: relative;
+        margin: 0;
+        z-index: 1;
+}
+
+.circle img {
+        position: relative;
+        top: 70px;
+        width: 325px;
+        height: 250px;
 }
 
 .logo > h1 {
@@ -22,6 +30,7 @@ img {
 
 main {
         position: relative;
+        top: 40px;
         width: 90%;
         margin: 0 auto;
 }
@@ -35,7 +44,7 @@ ul {
         position: relative;
         top: 0;
         width: 100%;
-        height: 85px;
+        height: 90px;
         background: #20B9E2;
 }
 
@@ -46,7 +55,7 @@ ul {
 
 #mainNav {
         position: relative;
-        bottom: 0;
+        top: 38px;
         margin: 0;
 }
 
@@ -91,6 +100,7 @@ ul {
         display: flex;
         width: 100%;
         justify-content: space-between;
+        margin: 0 0 40px 0;
 }
 
 .buckets {
@@ -111,7 +121,7 @@ ul {
 
 .headers {
         position: relative;
-        top: 0;
+        bottom: 5px;
         height: 50px;
         background: #F70B0B;
 }
@@ -132,16 +142,20 @@ ul {
 }
 
 footer {
+        position: relative;
+        top: 40px;
         width: 90%;
-        height: 60px;
+        height: 70px;
         background: #F70B0B;
         margin: 0 auto;
 }
 
 .footLinks {
+        position: relative;
+        top: 11px;
         display: flex;
         width: 100%;
-        height: 60px;
+        height: 70px;
         justify-content: space-evenly;
 }
 
@@ -155,5 +169,12 @@ footer {
 }
 
 h6 {
+        position: relative;
+        bottom: 65px;
+        text-align: center;
+        font-size: 1.5em;
+        color: #20B9E2;
+        font-family: 'Inconsolata', monospace;
+        font-weight: bold;
         margin: 0;
 }
