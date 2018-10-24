@@ -47,12 +47,16 @@ ul {
 #mainNav {
         position: relative;
         bottom: 0;
+        margin: 0;
 }
 
 .navLinks {
+        position: relative;
+        bottom: 0;
         display: flex;
         width: 100%;
         border: .5px solid #20B9E2;
+        margin: 0;
 }
 
 .navLinks li {
@@ -91,6 +95,8 @@ ul {
 
 .buckets {
         background: #ffffff99;
+        width: 31%;
+        height: 380px;
 }
 
 .images, .headers {
@@ -119,9 +125,16 @@ ul {
         margin: 0;
 }
 
+.paragraphs {
+        padding: 0 20px 0 20px;
+        font-family: 'Inconsolata', monospace;
+
+}
+
 footer {
         width: 90%;
         height: 60px;
+        background: #F70B0B;
         margin: 0 auto;
 }
 
@@ -139,4 +152,8 @@ footer {
 .socialLogo {
         height: 48px;
         width: 48px;
+}
+
+h6 {
+        margin: 0;
 }
