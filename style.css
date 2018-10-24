@@ -30,6 +30,18 @@ ul {
         display: flex;
 }
 
+.navLinks li {
+        width: 20%;
+        border: .5px solid #20B9E2;
+
+}
+
+.navLinks li a {
+        width: 100%;
+        border: .5px solid #20B9E2;
+        color: #20B9E2;
+}
+
 .circle {
         border-radius: 50%;
         display: inline-block;
