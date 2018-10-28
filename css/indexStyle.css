@@ -1,0 +1,251 @@
+/* This is the CSS3 'index' File For Dominic's BioSite */
+
+html {
+        width: 100%;
+}
+
+body {
+        position: relative;
+        background: url(images/scroll1.jpg) no-repeat center center fixed;
+        background-size: cover;
+        margin: 0 auto;
+}
+
+header {
+        height: 200px;
+}
+
+header, .circle {
+        position: relative;
+        margin: 0;
+        z-index: 1;
+}
+
+.circle img {
+        position: relative;
+        top: 12px;
+        width: 325px;
+        height: 250px;
+}
+
+.logo > h1 {
+        display: none;
+}
+
+main {
+        position: relative;
+        top: 40px;
+        width: 90%;
+        margin: 0 auto;
+}
+
+ul {
+        list-style: none;
+        padding: 0;
+}
+
+#navCenter {
+        position: relative;
+        top: 0;
+        width: 100%;
+        height: 90px;
+        background: #20B9E2;
+}
+
+#imgScroll {
+        position: relative;
+        top: 0;
+}
+
+#mainNav {
+        position: relative;
+        top: 38px;
+        margin: 0;
+}
+
+.navLinks {
+        position: relative;
+        bottom: 0;
+        display: flex;
+        width: 100%;
+        border: .5px solid #20B9E2;
+        margin: 0;
+}
+
+.navLinks li {
+        position: relative;
+        bottom: 0px;
+        width: 25%;
+        height: 50px;
+        border: .5px solid #20B9E2;
+
+}
+
+.navLinks li a {
+        display: block;
+        font-family: 'Inconsolata', monospace;
+        font-weight: bold;
+        line-height: 50px;
+        text-decoration: none;
+}
+
+.navLinks li a h3 {
+        width: 100%;
+        border: .5px solid #20B9E2;
+        height: 50px;
+        background: #000000;
+        color: #20B9E2;
+        text-align: center;
+        margin: 0;
+}
+
+#infoBuckets {
+        position: relative;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin: 0 0 40px 0;
+}
+
+.buckets {
+        background: #ffffff99;
+        width: 31%;
+        height: 380px;
+}
+
+.images, .headers {
+        width: 100%;
+        margin: 0;
+
+}
+
+.images {
+        height: 100px;
+}
+
+.headers {
+        position: relative;
+        bottom: 5px;
+        height: 50px;
+        background: #F70B0B;
+}
+
+.headers h2 {
+        color: #20B9E2;
+        font-family: 'Inconsolata', monospace;
+        font-weight: bold;
+        line-height: 50px;
+        text-indent: 25px;
+        margin: 0;
+}
+
+.paragraphs {
+        padding: 0 20px 0 20px;
+        font-family: 'Inconsolata', monospace;
+
+}
+
+.buttons {
+        position: relative;
+        margin: 0 auto;
+        height: 50px;
+        width: 80%;
+        background: #000000;
+}
+
+.buttons a {
+        text-decoration: none;
+        height: 100%;
+        width: 100%;
+        color:  #20B9E2;
+        line-height: 50px;
+        text-align: center;
+}
+
+.buttons a h3 {
+        font-family: 'Inconsolata', monospace;
+        font-size: 1em;
+}
+
+footer {
+        position: relative;
+        top: 40px;
+        width: 90%;
+        height: 70px;
+        background: #F70B0B;
+        margin: 0 auto;
+}
+
+#footerNav {
+        position: relative;
+        top: 11px;
+}
+
+.footLinks {
+        position: relative;
+        top: 0;
+        display: flex;
+        width: 100%;
+        height: 48px;
+        justify-content: space-evenly;
+        margin: 0;
+}
+
+.social {
+        position: relative;
+        top: 0;
+        height: 48px;
+        width: 48px;
+}
+
+#faceLink, #twitLink, #gooLink, #pinLink {
+        position: relative;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        line-height: 48px;
+        vertical-align: top;
+}
+
+#socialFace, #socialTwit, #socialGoo, #socialPin {
+        position: relative;
+        top: 0;
+        color: #F70B0B;
+        font-size: .1em;
+        vertical-align: top;
+        margin: 0;
+}
+
+#socialFace span, #socialTwit span, #socialGoo span, #socialPin span {
+		position: absolute;
+		width: 100%;
+		height: 48px;
+}
+
+#socialFace span {
+        background: url("svg/faceLogoUp.svg") center no-repeat;
+}
+
+#socialTwit span {
+        background: url("svg/twitLogoUp.svg") center no-repeat;
+}
+
+#socialGoo span {
+        background: url("svg/gooLogoUp.svg") center no-repeat;
+}
+
+#socialPin span {
+        background: url("svg/pinLogoUp.svg") center no-repeat;
+}
+
+h6 {
+        position: relative;
+        bottom: 22px;
+        text-align: center;
+        font-size: 1.3em;
+        color: #20B9E2;
+        font-family: 'Inconsolata', monospace;
+        font-weight: bold;
+        vertical-align: center;
+        margin: 0;
+}
