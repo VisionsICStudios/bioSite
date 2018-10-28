@@ -6,7 +6,7 @@ html {
 
 body {
         position: relative;
-        background: url(images/scroll1.jpg) no-repeat center center fixed;
+        background: url(../images/scroll1.jpg) no-repeat center center fixed;
         background-size: cover;
         margin: 0 auto;
 }
@@ -223,19 +223,19 @@ footer {
 }
 
 #socialFace span {
-        background: url("svg/faceLogoUp.svg") center no-repeat;
+        background: url("../svg/faceLogoUp.svg") center no-repeat;
 }
 
 #socialTwit span {
-        background: url("svg/twitLogoUp.svg") center no-repeat;
+        background: url("../svg/twitLogoUp.svg") center no-repeat;
 }
 
 #socialGoo span {
-        background: url("svg/gooLogoUp.svg") center no-repeat;
+        background: url("../svg/gooLogoUp.svg") center no-repeat;
 }
 
 #socialPin span {
-        background: url("svg/pinLogoUp.svg") center no-repeat;
+        background: url("../svg/pinLogoUp.svg") center no-repeat;
 }
 
 h6 {
