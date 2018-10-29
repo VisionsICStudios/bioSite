@@ -19,15 +19,15 @@ header, .place {
         position: relative;
         margin: 0;
         height: 100px;
-        z-index: 1;
 }
 
 .place img {
-        position: relative;
-        top: 0;
-        width: 100px;
-        height: 100px;
+        position: absolute;
+        top: -70px;
+        width: 200px;
+        height: 300px;
         margin: 0;
+        z-index: 1;
 }
 
 .logo > h1 {
@@ -54,14 +54,9 @@ ul {
         background: #20B9E2;
 }
 
-#imgScroll {
-        position: relative;
-        top: 0;
-}
-
 #mainNav {
         position: relative;
-        top: 38px;
+        top: 52px;
         margin: 0;
 }
 
@@ -103,26 +98,35 @@ ul {
 
 #mainContent {
         position: relative;
+        top: 100px;
         display: flex;
         width: 100%;
         justify-content: space-between;
+        background: #ffffff99;
         margin: 0 0 40px 0;
 }
 
-.bio {
-        background: #ffffff99;
-        width: 100%;
-        height: 380px;
-}
-
-.images, .headers {
-        width: 100%;
-        margin: 0;
-
+#bioImg {
+        position: relative;
+        width: 300px;
 }
 
 .images {
-        height: 100px;
+        height: 250px;
+        width: 100%;
+}
+
+#bioType {
+        display: grid;
+}
+
+.bio {
+        position: relative;
+        top: -48px;
+        width: 100%;
+        height: 525px;
+        columns: 2 200px;
+        column-gap: 3em;
 }
 
 .headers {
@@ -130,7 +134,12 @@ ul {
         bottom: 5px;
         height: 50px;
         background: #F70B0B;
+        width: 100%;
+        margin: 0;
+
 }
+
+
 
 .headers h2 {
         color: #20B9E2;
@@ -145,28 +154,6 @@ ul {
         padding: 0 20px 0 20px;
         font-family: 'Inconsolata', monospace;
 
-}
-
-.buttons {
-        position: relative;
-        margin: 0 auto;
-        height: 50px;
-        width: 80%;
-        background: #000000;
-}
-
-.buttons a {
-        text-decoration: none;
-        height: 100%;
-        width: 100%;
-        color:  #20B9E2;
-        line-height: 50px;
-        text-align: center;
-}
-
-.buttons a h3 {
-        font-family: 'Inconsolata', monospace;
-        font-size: 1em;
 }
 
 footer {

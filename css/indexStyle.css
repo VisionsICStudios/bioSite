@@ -17,19 +17,30 @@ header {
 
 header, .circle {
         position: relative;
+        top: 0;
         margin: 0;
-        z-index: 1;
 }
 
 .circle img {
-        position: relative;
-        top: 12px;
+        position: absolute;
+        top: -42px;
         width: 325px;
         height: 250px;
+        z-index: 1;
+}
+
+.logo {
+        position: relative;
+        top: 0;
+        margin: 0;
 }
 
 .logo > h1 {
         display: none;
+}
+
+.scrollControls {
+        margin: 0;
 }
 
 main {
@@ -55,6 +66,7 @@ ul {
 #imgScroll {
         position: relative;
         top: 0;
+        margin: 0;
 }
 
 #mainNav {
@@ -120,12 +132,12 @@ ul {
 }
 
 .images {
-        height: 100px;
+        height: 300px;
 }
 
 .headers {
         position: relative;
-        bottom: 5px;
+        top: -4px;
         height: 50px;
         background: #F70B0B;
 }
