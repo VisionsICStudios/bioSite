@@ -1,86 +1,97 @@
 /* This is the CSS3 'bio' File For Dominic's BioSite */
 
+/* I'm using CSS variables on the root with the page coloring so it is preset */
+
+:root {
+        --white: #ffffff99;
+        --blue: #20B9E2;
+        --red: #F70B0B;
+        --black: #000000;
+        --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+        --font: 'Inconsolata', monospace;
+}
+
+* {
+        margin: 0;
+        padding: 0;
+}
+
 html {
+        box-sizing: border-box;
+        font-family: var(--font);
+        color: var(--black); /* This is how you address a variable in CSS */
         width: 100%;
 }
 
 body {
-        position: relative;
         background: url(../images/scroll1.jpg) no-repeat center center fixed;
         background-size: cover;
         margin: 0 auto;
 }
 
-header {
-        height: 100px;
+.container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
 }
 
-header, .place {
-        position: relative;
-        margin: 0;
-        height: 100px;
+/* Header Section Layout */
+.header {
+        grid-area: header;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
 }
 
-.place img {
-        position: absolute;
-        top: -70px;
-        width: 200px;
-        height: 300px;
-        margin: 0;
-        z-index: 1;
+.logo {
+        grid-area: logo;
 }
 
-.logo > h1 {
-        display: none;
+#logoTitle {
+        font-family: var(--font);
+        font-size: .1em;
+        color: var(--blue);
 }
 
-main {
-        position: relative;
-        top: 0;
-        width: 90%;
-        margin: 0 auto;
+header img {
+        width: 125px;
+        height: 200px;
 }
 
-ul {
-        list-style: none;
-        padding: 0;
+.quote {
+        grid-area: quote;
 }
 
-#navCenter {
-        position: relative;
-        top: 0;
+.quote p {
+        background: rgba(104, 104, 104, 0.4);
+        box-shadow: var(--shadow);
+        font-family: var(--font);
+        font-size: 1em;
+        color: var(--red);
+        text-shadow: var(--shadow);
+}
+
+.navigation {
+        grid-area: navigation;
         width: 100%;
-        height: 90px;
-        background: #20B9E2;
-}
-
-#mainNav {
-        position: relative;
-        top: 52px;
-        margin: 0;
 }
 
 .navLinks {
-        position: relative;
-        bottom: 0;
         display: flex;
         width: 100%;
-        border: .5px solid #20B9E2;
-        margin: 0;
+        border: .5px solid var(--blue);
 }
 
 .navLinks li {
-        position: relative;
-        bottom: 0px;
         width: 25%;
         height: 50px;
-        border: .5px solid #20B9E2;
+        border: .5px solid var(--blue);
 
 }
 
 .navLinks li a {
         display: block;
-        font-family: 'Inconsolata', monospace;
+        font-family: var(--font);
         font-weight: bold;
         line-height: 50px;
         text-decoration: none;
@@ -88,153 +99,113 @@ ul {
 
 .navLinks li a h3 {
         width: 100%;
-        border: .5px solid #20B9E2;
+        border: .5px solid var(--blue);
         height: 50px;
-        background: #000000;
-        color: #20B9E2;
+        background: var(--black);
+        color: var(--blue);
         text-align: center;
-        margin: 0;
 }
 
-#mainContent {
-        position: relative;
-        top: 100px;
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        background: #ffffff99;
-        margin: 0 0 40px 0;
-}
-
-#bioImg {
-        position: relative;
-        width: 300px;
-}
-
-.images {
-        height: 250px;
-        width: 100%;
-}
-
-#bioType {
+/* Content Section Layout */
+.content {
+        grid-area: content;
         display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        background: var(--white);
+}
+
+.bioImg {
+        grid-area: bioImg;
+        width: 100%;
+}
+
+.image {
+        width: 100%;
+        height: 100%;
+}
+
+figcaption p {
+        font-family: var(--font);
+        font-size: .8em;
+        color: var(--black);
+}
+
+.bioHead {
+        grid-area: bioHead;
+        background: var(--red);
+}
+
+.headers h2 {
+        font-family: var(--font);
+        font-size: 1.4em;
+        text-indent: 1rem;
+        color: var(--blue)
+}
+
+.bioPara {
+        grid-area: bioPara;
 }
 
 .bio {
-        position: relative;
-        top: -48px;
-        width: 100%;
-        height: 525px;
-        columns: 2 200px;
-        column-gap: 3em;
-}
-
-.headers {
-        position: relative;
-        bottom: 5px;
-        height: 50px;
-        background: #F70B0B;
-        width: 100%;
-        margin: 0;
-
-}
-
-
-
-.headers h2 {
-        color: #20B9E2;
-        font-family: 'Inconsolata', monospace;
-        font-weight: bold;
-        line-height: 50px;
-        text-indent: 25px;
-        margin: 0;
+        display: flex;
+        justify-content: space-around;
 }
 
 .paragraphs {
-        padding: 0 20px 0 20px;
-        font-family: 'Inconsolata', monospace;
-
+        font-family: var(--font);
+        font-size: 1em;
+        color: var(--black);
 }
 
-footer {
-        position: relative;
-        top: 40px;
-        width: 90%;
-        height: 70px;
-        background: #F70B0B;
-        margin: 0 auto;
-}
-
-#footerNav {
-        position: relative;
-        top: 11px;
-}
-
-.footLinks {
-        position: relative;
-        top: 0;
-        display: flex;
-        width: 100%;
-        height: 48px;
-        justify-content: space-evenly;
-        margin: 0;
+/* Footer Section Layout */
+.footer {
+        grid-area: footer;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
 }
 
 .social {
-        position: relative;
-        top: 0;
         height: 48px;
         width: 48px;
 }
 
-#faceLink, #twitLink, #gooLink, #pinLink {
-        position: relative;
-        top: 0;
+span {
+        color: var(--red);
+        font-size: .1em;
+        vertical-align: top;
+}
+
+.facebook, .twitter, .googlePlus, .pinterest {
+        position: absolute;
         height: 100%;
         width: 100%;
         line-height: 48px;
         vertical-align: top;
 }
 
-#socialFace, #socialTwit, #socialGoo, #socialPin {
-        position: relative;
-        top: 0;
-        color: #F70B0B;
-        font-size: .1em;
-        vertical-align: top;
-        margin: 0;
-}
-
-#socialFace span, #socialTwit span, #socialGoo span, #socialPin span {
-		position: absolute;
-		width: 100%;
-		height: 48px;
-}
-
-#socialFace span {
+.facebook {
         background: url("../svg/faceLogoUp.svg") center no-repeat;
 }
 
-#socialTwit span {
+.twitter {
         background: url("../svg/twitLogoUp.svg") center no-repeat;
 }
 
-#socialGoo span {
+.googlePlus {
         background: url("../svg/gooLogoUp.svg") center no-repeat;
 }
 
-#socialPin span {
+.pinterest {
         background: url("../svg/pinLogoUp.svg") center no-repeat;
 }
 
 h6 {
-        position: relative;
-        bottom: 22px;
         text-align: center;
         font-size: 1.3em;
-        color: #20B9E2;
-        font-family: 'Inconsolata', monospace;
+        color: var(--blue);
+        font-family: var(--font);
         font-weight: bold;
         vertical-align: center;
-        margin: 0;
 }
