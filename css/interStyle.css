@@ -1,89 +1,121 @@
 /* This is the CSS3 'interests' File For Dominic's BioSite */
 
+/* I'm using CSS variables on the root with the page coloring so it is preset */
+
+:root {
+        --white: #ffffff99;
+        --blue: #20B9E2;
+        --red: #F70B0B;
+        --black: #000000;
+        --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+        --font: 'Inconsolata', monospace;
+}
+
+* {
+        margin: 0;
+        padding: 0;
+}
+
 html {
+        box-sizing: border-box;
+        font-family: var(--font);
+        color: var(--black); /* This is how you address a variable in CSS */
         width: 100%;
 }
 
 body {
-        position: relative;
         background: url(../images/scroll1.jpg) no-repeat center center fixed;
         background-size: cover;
+}
+
+.container {
+        position: relative;
+        width: 90%;
+        height: 800px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+
+        "header header"
+        "content content"
+        "footer footer";
+
         margin: 0 auto;
 }
 
-header {
+/* Header Section Layout */
+.header {
+        grid-area: header;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+
+        "logo quote quote quote"
+        "navigation navigation navigation navigation";
+
         height: 200px;
 }
 
-header, .circle {
+.logo {
         position: relative;
-        margin: 0;
-        z-index: 1;
+        grid-area: logo;
+        height: 180px;
+        z-index: -10;
 }
 
-.circle img {
+#logoTitle {
+        font-family: var(--font);
+        font-size: .1em;
+        color: var(--blue);
+}
+
+header img {
         position: relative;
-        top: 12px;
-        width: 325px;
-        height: 250px;
+        top: -120px;
+        width: 250px;
+        height: 400px;
 }
 
-.logo > h1 {
-        display: none;
+.quote {
+        grid-area: quote;
+        height: 100px;
+        margin: 45px 0 0 0;
 }
 
-main {
-        position: relative;
-        top: 40px;
-        width: 90%;
-        margin: 0 auto;
+.quote p {
+        background: rgba(104, 104, 104, 0.4);
+        box-shadow: var(--shadow);
+        font-family: var(--font);
+        font-size: 2.5em;
+        color: var(--red);
+        text-shadow: var(--shadow);
 }
 
-ul {
-        list-style: none;
-        padding: 0;
-}
-
-#navCenter {
-        position: relative;
-        top: 0;
+.navigation {
+        grid-area: navigation;
         width: 100%;
-        height: 90px;
-        background: #20B9E2;
-}
-
-#imgScroll {
-        position: relative;
-        top: 0;
-}
-
-#mainNav {
-        position: relative;
-        top: 38px;
-        margin: 0;
+        height: 50px;
 }
 
 .navLinks {
-        position: relative;
-        bottom: 0;
         display: flex;
         width: 100%;
-        border: .5px solid #20B9E2;
-        margin: 0;
+        border: .5px solid var(--blue);
+        list-style: none;
 }
 
 .navLinks li {
-        position: relative;
-        bottom: 0px;
         width: 25%;
         height: 50px;
-        border: .5px solid #20B9E2;
+        border: .5px solid var(--blue);
 
 }
 
 .navLinks li a {
         display: block;
-        font-family: 'Inconsolata', monospace;
+        font-family: var(--font);
         font-weight: bold;
         line-height: 50px;
         text-decoration: none;
@@ -91,94 +123,113 @@ ul {
 
 .navLinks li a h3 {
         width: 100%;
-        border: .5px solid #20B9E2;
+        border: .5px solid var(--blue);
         height: 50px;
-        background: #000000;
-        color: #20B9E2;
+        background: var(--black);
+        color: var(--blue);
         text-align: center;
-        margin: 0;
 }
 
-#infoBuckets {
+.selected {
+        background: var(--blue);
+}
+
+.selected h3 {
+        color: var(--black);
+}
+
+/* Content Section Layout */
+.content {
         position: relative;
-        display: flex;
+        top: 32px;
+        grid-area: content;
+        display: grid;
+        grid-template-columns: 20% 35% 35%;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+
+        "bioImg bioHead bioHead "
+        "bioImg bioPara bioPara"
+        "bioImg bioPara bioPara"
+        "bioImg bioPara bioPara"
+        "bioImg bioPara bioPara";
+
+        background: var(--white);
         width: 100%;
-        justify-content: space-between;
-        margin: 0 0 40px 0;
+        padding: 0 0 50px 0;
 }
 
-.buckets {
-        background: #ffffff99;
-        width: 31%;
-        height: 380px;
-}
-
-.images, .headers {
+.intImg {
+        grid-area: bioImg;
         width: 100%;
-        margin: 0;
-
 }
 
-.images {
-        height: 100px;
+.image {
+        width: 100%;
+        height: 425px;
 }
 
-.headers {
-        position: relative;
-        bottom: 5px;
+figcaption p {
+        font-family: var(--font);
+        font-size: .9em;
+        font-weight: bold;
+        text-indent: 10px;
+        color: var(--black);
+        padding: 10px 0 0 0;
+}
+
+.intHead {
+        grid-area: bioHead;
+        background: var(--red);
         height: 50px;
-        background: #F70B0B;
+        width: 100%;
+        padding: 0 0 0 14.25%;
 }
 
 .headers h2 {
-        color: #20B9E2;
-        font-family: 'Inconsolata', monospace;
-        font-weight: bold;
+        position: relative;
+        top: 0;
+        font-family: var(--font);
+        font-size: 1.4em;
+        text-indent: 1rem;
+        color: var(--blue);
         line-height: 50px;
-        text-indent: 25px;
+}
+
+.intPara {
+        grid-area: bioPara;
+        padding: 0 0 0 14.25%;
+}
+
+.interests {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
         margin: 0;
 }
 
 .paragraphs {
-        padding: 0 20px 0 20px;
-        font-family: 'Inconsolata', monospace;
-
+        font-family: var(--font);
+        font-size: 1.2em;
+        color: var(--black);
+        padding: 1em;
 }
 
-.buttons {
-        position: relative;
-        margin: 0 auto;
-        height: 50px;
-        width: 80%;
-        background: #000000;
-}
-
-.buttons a {
-        text-decoration: none;
-        height: 100%;
-        width: 100%;
-        color:  #20B9E2;
-        line-height: 50px;
-        text-align: center;
-}
-
-.buttons a h3 {
-        font-family: 'Inconsolata', monospace;
-        font-size: 1em;
-}
-
-footer {
+/* Footer Section Layout */
+.footer {
+        grid-area: footer;
         position: relative;
         top: 40px;
-        width: 90%;
+        width: 100%;
         height: 70px;
-        background: #F70B0B;
-        margin: 0 auto;
+        background: var(--red);
+        margin: 40px auto 0 auto;
 }
 
 #footerNav {
         position: relative;
         top: 11px;
+        width: 100%;
 }
 
 .footLinks {
@@ -196,6 +247,14 @@ footer {
         top: 0;
         height: 48px;
         width: 48px;
+        list-style: none;
+}
+
+.copyright {
+        position: relative;
+        top: 35px;
+        height: 48px;
+        list-style: none;
 }
 
 #faceLink, #twitLink, #gooLink, #pinLink {
@@ -210,7 +269,7 @@ footer {
 #socialFace, #socialTwit, #socialGoo, #socialPin {
         position: relative;
         top: 0;
-        color: #F70B0B;
+        color: var(--red);
         font-size: .1em;
         vertical-align: top;
         margin: 0;
@@ -243,8 +302,8 @@ h6 {
         bottom: 22px;
         text-align: center;
         font-size: 1.3em;
-        color: #20B9E2;
-        font-family: 'Inconsolata', monospace;
+        color: var(--blue);
+        font-family: var(--font);
         font-weight: bold;
         vertical-align: center;
         margin: 0;
