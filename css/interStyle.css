@@ -24,7 +24,7 @@ html {
 }
 
 body {
-        background: url(../images/scroll1.jpg) no-repeat center center fixed;
+        background: url(../images/biosite_mainBW.jpg) no-repeat center center fixed;
         background-size: cover;
 }
 
@@ -131,11 +131,14 @@ header img {
 }
 
 .selected {
-        background: var(--blue);
+        background: var(--white);
 }
 
 .selected h3 {
         color: var(--black);
+        font-weight: bolder;
+        text-align: center;
+        line-height: 50px;
 }
 
 /* Content Section Layout */

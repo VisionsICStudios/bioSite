@@ -1,6 +1,23 @@
 /* This is the CSS3 'index' File For Dominic's BioSite */
 
+:root {
+        --white: #ffffff99;
+        --blue: #20B9E2;
+        --red: #F70B0B;
+        --black: #000000;
+        --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+        --font: 'Inconsolata', monospace;
+}
+
+* {
+        margin: 0;
+        padding: 0;
+}
+
 html {
+        box-sizing: border-box;
+        font-family: var(--font);
+        color: var(--black); /* This is how you address a variable in CSS */
         width: 100%;
 }
 
@@ -60,7 +77,7 @@ ul {
         top: 0;
         width: 100%;
         height: 90px;
-        background: #20B9E2;
+        background: var(--blue);
 }
 
 #imgScroll {
@@ -80,7 +97,7 @@ ul {
         bottom: 0;
         display: flex;
         width: 100%;
-        border: .5px solid #20B9E2;
+        border: .5px solid var(--blue);
         margin: 0;
 }
 
@@ -89,13 +106,13 @@ ul {
         bottom: 0px;
         width: 25%;
         height: 50px;
-        border: .5px solid #20B9E2;
+        border: .5px solid var(--blue);
 
 }
 
 .navLinks li a {
         display: block;
-        font-family: 'Inconsolata', monospace;
+        font-family: var(--font);
         font-weight: bold;
         line-height: 50px;
         text-decoration: none;
@@ -103,12 +120,23 @@ ul {
 
 .navLinks li a h3 {
         width: 100%;
-        border: .5px solid #20B9E2;
+        border: .5px solid var(--blue);
         height: 50px;
         background: #000000;
-        color: #20B9E2;
+        color: var(--blue);
         text-align: center;
         margin: 0;
+}
+
+.selected {
+        background: white;
+}
+
+.selected h3 {
+        color: var(--black);
+        font-weight: bolder;
+        text-align: center;
+        line-height: 50px;
 }
 
 #infoBuckets {
@@ -120,7 +148,7 @@ ul {
 }
 
 .buckets {
-        background: #ffffff99;
+        background: var(--white);
         width: 31%;
         height: 380px;
 }
@@ -132,19 +160,19 @@ ul {
 }
 
 .images {
-        height: 300px;
+        height: 100px;
 }
 
 .headers {
         position: relative;
         top: -4px;
         height: 50px;
-        background: #F70B0B;
+        background: var(--red);
 }
 
 .headers h2 {
-        color: #20B9E2;
-        font-family: 'Inconsolata', monospace;
+        color: var(--blue);
+        font-family: var(--font);
         font-weight: bold;
         line-height: 50px;
         text-indent: 25px;
@@ -152,8 +180,8 @@ ul {
 }
 
 .paragraphs {
-        padding: 0 20px 0 20px;
-        font-family: 'Inconsolata', monospace;
+        padding: 20px 20px 20px 20px;
+        font-family: var(--font);
 
 }
 
@@ -162,20 +190,20 @@ ul {
         margin: 0 auto;
         height: 50px;
         width: 80%;
-        background: #000000;
+        background: var(--black);
 }
 
 .buttons a {
         text-decoration: none;
         height: 100%;
         width: 100%;
-        color:  #20B9E2;
+        color:  var(--blue);
         line-height: 50px;
         text-align: center;
 }
 
 .buttons a h3 {
-        font-family: 'Inconsolata', monospace;
+        font-family: var(--font);
         font-size: 1em;
 }
 
@@ -184,7 +212,7 @@ footer {
         top: 40px;
         width: 90%;
         height: 70px;
-        background: #F70B0B;
+        background: var(--red);
         margin: 0 auto;
 }
 
@@ -222,7 +250,7 @@ footer {
 #socialFace, #socialTwit, #socialGoo, #socialPin {
         position: relative;
         top: 0;
-        color: #F70B0B;
+        color: var(--red);
         font-size: .1em;
         vertical-align: top;
         margin: 0;
@@ -255,8 +283,8 @@ h6 {
         bottom: 22px;
         text-align: center;
         font-size: 1.3em;
-        color: #20B9E2;
-        font-family: 'Inconsolata', monospace;
+        color: var(--blue);
+        font-family: var(--font);
         font-weight: bold;
         vertical-align: center;
         margin: 0;
