@@ -186,7 +186,7 @@ figcaption p {
         background: var(--red);
         height: 50px;
         width: 100%;
-        padding: 0 0 0 14.25%;
+        padding: 0 0 0 14.3%;
 }
 
 .headers h2 {
@@ -194,28 +194,26 @@ figcaption p {
         top: 0;
         font-family: var(--font);
         font-size: 1.4em;
-        text-indent: 1rem;
         color: var(--blue);
         line-height: 50px;
 }
 
 .intPara {
         grid-area: bioPara;
-        padding: 0 0 0 14.25%;
+        padding: 0 0 0 14.3%;
 }
 
 .interests {
-        display: flex;
-        justify-content: space-between;
+        columns: 2 300px;
+        column-gap: 2em;
         width: 100%;
         margin: 0;
 }
 
 .paragraphs {
         font-family: var(--font);
-        font-size: 1.2em;
+        font-size: 1em;
         color: var(--black);
-        padding: 1em;
 }
 
 /* Footer Section Layout */
