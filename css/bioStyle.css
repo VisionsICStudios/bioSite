@@ -205,15 +205,15 @@ figcaption p {
 }
 
 .bio {
-        display: flex;
-        justify-content: space-between;
+        columns: 2 200px;
+        column-gap: 4em;
         width: 100%;
         margin: 0;
 }
 
 .paragraphs {
         font-family: var(--font);
-        font-size: 1.2em;
+        font-size: 1em;
         color: var(--black);
         padding: 1em;
 }
