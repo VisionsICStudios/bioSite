@@ -1,4 +1,4 @@
-/* This is the CSS3 'interests' File For Dominic's BioSite */
+/* This is the CSS3 'interestsVideo' File For Dominic's BioSite */
 
 /* I'm using CSS variables on the root with the page coloring so it is preset */
 
@@ -144,41 +144,20 @@ header img {
 /* Content Section Layout */
 .content {
         position: relative;
-        top: 32px;
+        top: -40px;
         grid-area: content;
         display: grid;
-        grid-template-columns: 20% 35% 35%;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
         grid-template-areas:
 
-        "intImg intHead intHead "
-        "intImg intPara intPara"
-        "intImg intPara intPara"
-        "intImg intPara intPara"
-        "intImg intPara intPara";
+        "inthead"
+        "vidHead"
+        "vidContent";
 
         background: var(--white);
         width: 100%;
         padding: 0 0 20px 0;
-}
-
-.intImg {
-        grid-area: intImg;
-        width: 100%;
-}
-
-.image {
-        width: 100%;
-        height: 425px;
-}
-
-figcaption p {
-        font-family: var(--font);
-        font-size: .9em;
-        font-weight: bold;
-        text-indent: 10px;
-        color: var(--black);
-        padding: 10px 0 0 0;
 }
 
 .intHead {
@@ -186,7 +165,7 @@ figcaption p {
         background: var(--red);
         height: 50px;
         width: 100%;
-        padding: 0 0 0 14.3%;
+        padding: 0 0 0 0;
 }
 
 .headers h2 {
@@ -198,34 +177,21 @@ figcaption p {
         line-height: 50px;
 }
 
-.intPara {
-        grid-area: intPara;
-        padding: 0 0 0 14.3%;
-}
-
-.interests {
-        columns: 2 300px;
-        column-gap: 2em;
-        width: 100%;
-        margin: 0;
-}
-
-.paragraphs {
-        font-family: var(--font);
-        font-size: 1em;
-        color: var(--black);
+.vidHead {
+        grid-area: vidHead;
+        padding: 0 0 0 0;
 }
 
 .video {
         position: relative;
-        width: 400px;
-        height: 48px;
+        width: 500px;
+        height: 400px;
         color: red;
         text-decoration: none;
         margin: 0 auto;
 }
 
-h4 {
+.vidHead h4 {
         position: relative;
         text-align: center;
         font-size: 1em;
@@ -233,18 +199,16 @@ h4 {
         padding: 0 0 20px 0;
 }
 
-.video a {
+.vidContent {
+        grid-area: vidContent;
         position: relative;
-        font-size: .05em;
+        width: 100%;
 }
 
-.video span {
+.vidContent span {
         position: absolute;
-        left: 164px;
-        width: 72px;
-        height: 48px;
-        background: url(../svg/youTubePlay.svg) center no-repeat;
-        text-align: center;
+        width: 100%;
+        height: 340px;
         margin: 0 auto;
 
 }
