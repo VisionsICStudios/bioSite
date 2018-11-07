@@ -7,6 +7,7 @@
         --black: #000000;
         --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
         --font: 'Inconsolata', monospace;
+        --hide:  #ffffff01;
 }
 
 * {
@@ -34,7 +35,7 @@ header {
 
 header, .circle {
         position: relative;
-        top: 0;
+        top: -5px;
         margin: 0;
 }
 
@@ -53,7 +54,28 @@ header, .circle {
 }
 
 .logo > h1 {
-        display: none;
+        position: relative;
+        top: 60px;
+        text-align: center;
+        font-family: var(--font);
+        font-size: .1em;
+        color: var(--hide);
+}
+
+.quote {
+        grid-area: quote;
+        height: 100px;
+        margin: 45px 0 0 0;
+}
+
+.quote p {
+        background: rgba(104, 104, 104, 0.6);
+        box-shadow: var(--shadow);
+        font-family: var(--font);
+        font-size: 2.5em;
+        color: var(--blue);
+        text-shadow: var(--shadow);
+        margin-left: 25%;
 }
 
 .scrollControls {
@@ -107,23 +129,30 @@ ul {
         width: 25%;
         height: 50px;
         border: .5px solid var(--blue);
+        list-style-type: none;
 
 }
 
 .navLinks li a {
         display: block;
+        background: #000000; 
+        border: .5px solid var(--blue);
+        color: var(--blue);
         font-family: var(--font);
         font-weight: bold;
         line-height: 50px;
         text-decoration: none;
 }
 
+.navLinks li a:hover {
+        background: var(--blue);
+        color: var(--black);
+        border: .5px solid var(--black);
+}
+
 .navLinks li a h3 {
         width: 100%;
-        border: .5px solid var(--blue);
         height: 50px;
-        background: #000000;
-        color: var(--blue);
         text-align: center;
         margin: 0;
 }
@@ -189,17 +218,23 @@ ul {
         position: relative;
         margin: 0 auto;
         height: 50px;
-        width: 80%;
-        background: var(--black);
+        width: 80%;     
 }
 
 .buttons a {
+        position: absolute;
         text-decoration: none;
         height: 100%;
         width: 100%;
         color:  var(--blue);
+        background: var(--black);
         line-height: 50px;
         text-align: center;
+}
+
+.buttons a:hover {
+        color: var(--black);
+        background: var(--blue);
 }
 
 .buttons a h3 {
@@ -211,7 +246,7 @@ ul {
 .footer {
         grid-area: footer;
         position: relative;
-        top: 60px;
+        top: 45px;
         width: 90%;
         height: 70px;
         background: var(--red);
@@ -250,43 +285,60 @@ ul {
 }
 
 #faceLink, #twitLink, #gooLink, #pinLink {
-        position: relative;
+        position: absolute;
         top: 0;
         height: 100%;
         width: 100%;
         line-height: 48px;
+        text-decoration: none;
         vertical-align: top;
+}
+
+#faceLink {
+        background: url(../svg/FaceLogoUp.svg) center no-repeat;
+}
+
+#faceLink:hover {
+        background: url(../svg/FaceLogoOver.svg);
+}
+
+#twitLink {
+        background: url(../svg/TwitLogoUp.svg) center no-repeat;
+}
+
+#twitLink:hover {
+        background: url(../svg/TwitLogoOver.svg);
+}
+
+#gooLink {
+        background: url(../svg/GooLogoUp.svg) center no-repeat;
+}
+
+#gooLink:hover {
+        background: url(../svg/GooLogoOver.svg);
+}
+
+#pinLink {
+        background: url(../svg/PinLogoUp.svg) center no-repeat;
+}
+
+#pinLink:hover {
+        background: url(../svg/PinLogoOver.svg);
 }
 
 #socialFace, #socialTwit, #socialGoo, #socialPin {
         position: relative;
         top: 0;
-        color: var(--red);
+        text-align: center;
+        font-family: var(--font);
         font-size: .1em;
-        vertical-align: top;
-        margin: 0;
+        color: var(--hide);
 }
 
 #socialFace span, #socialTwit span, #socialGoo span, #socialPin span {
 		position: absolute;
 		width: 100%;
 		height: 48px;
-}
-
-#socialFace span {
-        background: url("../svg/faceLogoUp.svg") center no-repeat;
-}
-
-#socialTwit span {
-        background: url("../svg/twitLogoUp.svg") center no-repeat;
-}
-
-#socialGoo span {
-        background: url("../svg/gooLogoUp.svg") center no-repeat;
-}
-
-#socialPin span {
-        background: url("../svg/pinLogoUp.svg") center no-repeat;
 }
 
 h6 {
