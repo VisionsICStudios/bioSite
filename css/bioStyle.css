@@ -18,7 +18,8 @@
 }
 
 html {
-        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
         font-family: var(--font);
         color: var(--black); /* This is how you address a variable in CSS */
         width: 100%;
@@ -90,7 +91,8 @@ header img {
 
 .quote p {
         background: rgba(104, 104, 104, 0.6);
-        box-shadow: var(--shadow);
+        -webkit-box-shadow: var(--shadow);
+                box-shadow: var(--shadow);
         font-family: var(--font);
         font-size: 2.5em;
         color: var(--blue);
@@ -106,6 +108,8 @@ header img {
 .navLinks {
         position: relative;
         bottom: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         width: 100%;
         border: .5px solid var(--blue);
@@ -221,8 +225,10 @@ figcaption p {
 }
 
 .bio {
-        columns: 2 300px;
-        column-gap: 2em;
+        -webkit-columns: 2 300px;
+                columns: 2 300px;
+        -webkit-column-gap: 2em;
+                column-gap: 2em;
         width: 100%;
         margin: 0;
 }
@@ -254,10 +260,14 @@ figcaption p {
 .footLinks {
         position: relative;
         top: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         width: 100%;
         height: 48px;
-        justify-content: space-evenly;
+        -webkit-box-pack: space-evenly;
+            -ms-flex-pack: space-evenly;
+                justify-content: space-evenly;
         margin: 0;
 }
 
