@@ -19,7 +19,7 @@
 
 html {
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     font-family: var(--font);
     color: var(--black); /* This is how you address a variable in CSS */
     width: 100%;
@@ -34,8 +34,11 @@ body {
     position: relative;
     width: 90%;
     height: 800px;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:
 
@@ -48,9 +51,15 @@ body {
 
 /* Header Section Layout */
 .header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
     grid-area: header;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
 
@@ -61,6 +70,8 @@ body {
 }
 
 .logo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
     position: relative;
     grid-area: logo;
     height: 180px;
@@ -84,6 +95,9 @@ header img {
 }
 
 .quote {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 3;
     grid-area: quote;
     height: 100px;
     margin: 45px 0 0 0;
@@ -92,7 +106,7 @@ header img {
 .quote p {
     background: rgba(104, 104, 104, 0.6);
     -webkit-box-shadow: var(--shadow);
-            box-shadow: var(--shadow);
+    box-shadow: var(--shadow);
     font-family: var(--font);
     font-size: 2.5em;
     color: var(--blue);
@@ -100,6 +114,9 @@ header img {
 }
 
 .navigation {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
     grid-area: navigation;
     width: 100%;
     height: 50px;
@@ -163,6 +180,9 @@ header img {
 
 /* Content Section Layout */
 .content {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
     position: relative;
     top: 12px;
     grid-area: content;
@@ -194,10 +214,12 @@ header img {
 
 .images {
     padding: 40px 0 0 80px;
+    display: -ms-grid;
     display: grid;
     width: 100%;
     max-width: 100%;
     margin: 0 auto 50px auto;
+    -ms-grid-columns: (1fr)[6];
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 20px;
 }
@@ -207,8 +229,8 @@ header img {
     width: 125px;
     height: 94px;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 }
 
 .img a {
@@ -225,6 +247,9 @@ header img {
 
 /* Footer Section Layout */
 .footer {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
     grid-area: footer;
     position: fixed;
     bottom: 0;
@@ -250,8 +275,8 @@ header img {
     width: 100%;
     height: 48px;
     -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
     margin: 0;
 }
 
