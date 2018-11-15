@@ -34,19 +34,34 @@ header {
     height: 200px;
 }
 
-header,
-.circle {
+header, .circle {
   position: relative;
+  top: -20px;  
+}
+
+@media (min-width: 1281px) {
+  header, .circle {
   top: -5px;
   margin: 0;
+  }
 }
 
 .circle img {
   position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+@media (min-width: 1281px) {
+  .circle img {
+  /* CSS */
   top: -42px;
   width: 325px;
   height: 250px;
-  z-index: 1;
+  }
 }
 
 .logo {
@@ -65,9 +80,19 @@ header,
 }
 
 .quote {
-  grid-area: quote;
-  height: 100px;
-  margin: 45px 0 0 0;
+  position: relative;
+  top: 80px;
+  width: 100%;
+  height: 60px;
+}
+
+@media (min-width: 1281px) {
+  .quote {
+    top: 0;
+    grid-area: quote;
+    height: 100px;
+    margin: 45px 0 0 0;
+  }
 }
 
 .quote p {
@@ -75,12 +100,17 @@ header,
   -webkit-box-shadow: var(--shadow);
   box-shadow: var(--shadow);
   font-family: var(--font);
-  font-size: 2.5em;
+  font-size: .8em;
   color: var(--blue);
   text-shadow: var(--shadow);
-  margin-left: 25%;
 }
 
+@media (min-width: 1281px) {
+  .quote p {
+    font-size: 2.5em;
+    margin-left: 25%;
+  }
+}
 .scrollControls {
   margin: 0;
 }
@@ -99,10 +129,16 @@ ul {
 
 #navCenter {
   position: relative;
-  top: 0;
-  width: 100%;
-  height: 90px;
+  top: -102px;
   background: var(--blue);
+  width: 100%;
+}
+
+@media (min-width: 1281px) {
+  #navCenter {
+    top: 0;
+    height: 60px;
+  }  
 }
 
 #imgScroll {
@@ -113,8 +149,15 @@ ul {
 
 #mainNav {
   position: relative;
-  top: 38px;
+  top: 26px;
   margin: 0;
+}
+
+@media (min-width: 1281px) {
+  /* CSS */
+  #mainNav {
+    top: 38px;
+  }
 }
 
 .navLinks {
@@ -132,9 +175,16 @@ ul {
   position: relative;
   bottom: 0px;
   width: 25%;
-  height: 50px;
+  height: 25px;
   border: 0.5px solid var(--blue);
   list-style-type: none;
+}
+
+@media (min-width: 1281px) {
+  /* CSS */
+  .navLinks li {
+    height: 50px;
+  }
 }
 
 .navLinks li a {
@@ -144,8 +194,15 @@ ul {
   color: var(--blue);
   font-family: var(--font);
   font-weight: bold;
-  line-height: 50px;
+  line-height: 25px;
   text-decoration: none;
+}
+
+@media (min-width: 1281px) {
+  /* CSS */
+  .navLinks li a {
+    line-height: 50px;
+  }
 }
 
 .navLinks li a:hover {
@@ -156,9 +213,18 @@ ul {
 
 .navLinks li a h3 {
   width: 100%;
-  height: 50px;
+  height: 25px;
   text-align: center;
+  font-size: .7em;
   margin: 0;
+}
+
+@media (min-width: 1281px) {
+  /* CSS */
+  .navLinks li a h3 {
+    font-size: 1.2em;
+    height: 50px;
+  }
 }
 
 .selected {
@@ -169,25 +235,52 @@ ul {
   color: var(--black);
   font-weight: bolder;
   text-align: center;
-  line-height: 50px;
+  font-size: .7em;
+  line-height: 25px;
+}
+
+@media (min-width: 1281px) {
+  /* CSS */
+  .selected h3 {
+    font-size: 1.2em;
+    line-height: 50px;
+  }
 }
 
 #infoBuckets {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  top: -75px;
+  display: block;
   width: 100%;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  margin: 0 0 40px 0;
+}
+
+@media (min-width: 1281px) {
+  /* CSS */
+  #infoBuckets {
+    top: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin: 0 0 40px 0;
+  }
 }
 
 .buckets {
   background: var(--white);
-  width: 31%;
-  height: 380px;
+  width: 100%;
+  height: 280px;
+}
+
+@media (min-width: 1281px) {
+  /* CSS */
+  .buckets {
+    width: 31%;
+    height: 380px;
+  }
 }
 
 .images,
@@ -196,36 +289,80 @@ ul {
   margin: 0;
 }
 
+
 .images {
-  height: 100px;
+  height: 50px;
+}
+
+@media (min-width: 1281px) {
+  /* CSS */
+  .images {
+    height: 100px;
+  }
 }
 
 .headers {
   position: relative;
   top: -4px;
-  height: 50px;
+  height: 25px;
   background: var(--red);
+}
+
+@media (min-width: 1281px) {
+  /* CSS */
+  .headers {
+    top: -4px;
+    height: 50px;
+  }
 }
 
 .headers h2 {
   color: var(--blue);
   font-family: var(--font);
   font-weight: bold;
-  line-height: 50px;
-  text-indent: 25px;
+  font-size: 1em;
+  line-height: 25px;
+  text-indent: 10px;
   margin: 0;
 }
 
+@media (min-width: 1281px) {
+  /* CSS */
+  .headers h2 {
+    font-size: 30px;
+    line-height: 50px;
+    text-indent: 25px;
+  }
+}
+
 .paragraphs {
-  padding: 20px 20px 20px 20px;
+  padding: 10px;
   font-family: var(--font);
+  font-size: .8em;
+}
+
+@media (min-width: 1281px) {
+  /* CSS */
+  .paragraphs {
+    padding: 20px;
+    font-size: 1em;
+  }
 }
 
 .buttons {
   position: relative;
+  top: 20px;
   margin: 0 auto;
-  height: 50px;
+  height: 25px;
   width: 80%;
+}
+
+@media (min-width: 1281px) {
+  /* CSS */
+  .buttons {
+    top: 0;
+    height: 50px;
+  }
 }
 
 .buttons a {
@@ -235,8 +372,15 @@ ul {
   width: 100%;
   color: var(--blue);
   background: var(--black);
-  line-height: 50px;
+  line-height: 25px;
   text-align: center;
+}
+
+@media (min-width: 1281px) {
+  /* CSS */
+  .buttons a {
+    line-height: 50px;
+  }
 }
 
 .buttons a:hover {
@@ -245,8 +389,17 @@ ul {
 }
 
 .buttons a h3 {
+  position: relative;
+  top: 0;
   font-family: var(--font);
-  font-size: 1em;
+  font-size: .7em;
+}
+
+@media (min-width: 1281px) {
+  /* CSS */
+  .buttons a h3 {
+    font-size: 1.2em;
+  }
 }
 
 /* Footer Section Layout */
@@ -293,7 +446,15 @@ ul {
   position: relative;
   top: 35px;
   height: 48px;
+  font-size: .7em;
   list-style: none;
+}
+
+@media (min-width: 1281px) {
+  /* CSS */
+  .copyright {
+    font-size: 1.2em;
+  }
 }
 
 #faceLink,
