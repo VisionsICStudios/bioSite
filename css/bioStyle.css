@@ -342,35 +342,35 @@ figcaption p {
 }
 
 #faceLink {
-	background: url(../svg/FaceLogoUp.svg) center no-repeat;
+	background: url(../svg/faceLogoUp.svg) center no-repeat;
 }
 
 #faceLink:hover {
-	background: url(../svg/FaceLogoOver.svg);
+	background: url(../svg/faceLogoOver.svg);
 }
 
 #twitLink {
-	background: url(../svg/TwitLogoUp.svg) center no-repeat;
+	background: url(../svg/twitLogoUp.svg) center no-repeat;
 }
 
 #twitLink:hover {
-	background: url(../svg/TwitLogoOver.svg);
+	background: url(../svg/twitLogoOver.svg);
 }
 
 #gooLink {
-	background: url(../svg/GooLogoUp.svg) center no-repeat;
+	background: url(../svg/gooLogoUp.svg) center no-repeat;
 }
 
 #gooLink:hover {
-	background: url(../svg/GooLogoOver.svg);
+	background: url(../svg/gooLogoOver.svg);
 }
 
 #pinLink {
-	background: url(../svg/PinLogoUp.svg) center no-repeat;
+	background: url(../svg/pinLogoUp.svg) center no-repeat;
 }
 
 #pinLink:hover {
-	background: url(../svg/PinLogoOver.svg);
+	background: url(../svg/pinLogoOver.svg);
 }
 
 #socialFace, #socialTwit, #socialGoo, #socialPin {
